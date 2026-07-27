@@ -1,0 +1,14 @@
+# Local Tor configuration
+torrc
+
+# Local Docker files
+*.log
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Python (if you add scripts later)
+__pycache__/

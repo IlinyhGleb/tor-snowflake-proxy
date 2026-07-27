@@ -1,0 +1,22 @@
+# Store Tor state
+DataDirectory /var/lib/tor
+
+# SOCKS5 proxy
+SocksPort 0.0.0.0:9050
+SocksPolicy accept 192.168.1.0/24  # Write YOUR network here
+SocksPolicy reject *
+
+# Optional control port
+# ControlPort 9051
+
+# Write logs to stdout (visible in Docker/TrueNAS logs)
+Log notice stdout
+
+# Use Snowflake bridges
+UseBridges 1
+
+# Start the Snowflake transport
+ClientTransportPlugin snowflake exec /usr/bin/snowflake-client
+
+# Replace this line with YOUR bridge from Tor Browser.
+Bridge snowflake <YOUR_BRIDGE_HERE>
