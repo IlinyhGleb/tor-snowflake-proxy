@@ -2,9 +2,7 @@
 DataDirectory /var/lib/tor
 
 # SOCKS5 proxy
-SocksPort 0.0.0.0:9050
-SocksPolicy accept 192.168.1.0/24  # Write YOUR network here
-SocksPolicy reject *
+SocksPort 127.0.1.0:9050
 
 # Optional control port
 # ControlPort 9051
