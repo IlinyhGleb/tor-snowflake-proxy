@@ -2,7 +2,7 @@
 DataDirectory /var/lib/tor
 
 # SOCKS5 proxy
-SocksPort 127.0.1.0:9050
+SocksPort 127.0.0.1:9050
 
 # Optional control port
 # ControlPort 9051

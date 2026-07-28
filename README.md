@@ -39,9 +39,9 @@ docker build -t tor-snowflake-proxy .
 
 ```bash
 docker run -d \
-  --name tor-snowflake \
+  --name tor-snowflake-proxy \
   -p 8118:8118 \
-  -v $(pwd)/torrc:/etc/tor/torrc:ro \
+  -v $(pwd)/tor/torrc:/etc/tor/torrc:ro \
   -v tor-data:/var/lib/tor \
   tor-snowflake-proxy
 ```

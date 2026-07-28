@@ -26,8 +26,8 @@ VOLUME ["/var/lib/tor"]
 # Copy Privoxy configuration
 COPY privoxy/config /etc/privoxy/config
 
-# Copy Tor configuration
-#COPY torrc /etc/tor/torrc  # For local run (uncomment if you don't use shared volumes)
+# Copy Tor configuration (For local run. Uncomment if you don't use shared volumes):
+#COPY tor/torrc /etc/tor/torrc
 
 # Expose HTTP proxy
 EXPOSE 8118
