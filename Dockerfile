@@ -14,6 +14,7 @@ RUN apt-get update && \
         privoxy \
         netcat-openbsd \
         ca-certificates \
+        gosu \
         curl && \
     rm -rf /var/lib/apt/lists/*
 

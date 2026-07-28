@@ -2,6 +2,8 @@
 
 set -e
 
+chown -R debian-tor:debian-tor /var/lib/tor
+
 tor &
 
 sleep 5
