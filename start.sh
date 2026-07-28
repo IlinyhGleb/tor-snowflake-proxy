@@ -2,9 +2,12 @@
 
 set -e
 
-chown -R debian-tor:debian-tor /var/lib/tor
-
-tor &
+if [ "$(id -u)" = "0" ]; then
+    chown -R debian-tor:debian-tor /var/lib/tor
+    exec gosu debian-tor tor &
+else
+    tor &
+fi
 
 sleep 5
 

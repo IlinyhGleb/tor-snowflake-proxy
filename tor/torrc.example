@@ -1,6 +1,3 @@
-# Switch user
-User debian-tor
-
 # Store Tor state
 DataDirectory /var/lib/tor
 
