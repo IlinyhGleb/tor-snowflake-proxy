@@ -91,18 +91,31 @@ HTTPS_PROXY=http://<host>:8118
 
 ## TrueNAS SCALE
 
-Create a Custom App using the image and mount the required volumes.
+Create a Custom App using the image
 
-Mount:
+`ghcr.io/ilinyhgleb/tor-snowflake-proxy`
+
+with the `latest` tag.
+
+### Mount
+
+Mount the required volumes:
 
 | Host | Container |
 |------|-----------|
 | `/path/to/torrc` | `/etc/tor/torrc` (read-only) |
 | `/path/to/data` | `/var/lib/tor` |
 
-Expose port:
+### Restart policy
 
-- `8118/TCP`
+In the Container configuration choose restart policy:
+- `Unless Stopped - Restart the container irrespective of the exit code but stops restarting when the service is stopped or removed.`
+
+### Network configuration
+
+In the Network configuration choose `Publish port on the host for external access` and set Host and Container ports:
+
+- `8118:8118/TCP`
 
 ## License
 
